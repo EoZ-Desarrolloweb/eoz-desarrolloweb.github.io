@@ -104,6 +104,9 @@
             z-index: -1;
             opacity: 0.3;
         }
+        .plan-item {
+            @apply flex items-center gap-2 text-sm text-gray-400 border-b border-white/5 py-2 last:border-0;
+        }
     </style>
 </head>
 <body class="bg-eoz-dark text-white font-sans antialiased selection:bg-eoz-cyan selection:text-white">
@@ -117,6 +120,7 @@
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#servicios" class="text-sm font-medium text-gray-300 hover:text-white transition">Estrategias</a>
+                    <a href="#planes" class="text-sm font-medium text-gray-300 hover:text-white transition">Planes</a>
                     <a href="#profesionales" class="text-sm font-medium text-gray-300 hover:text-white transition">Profesionales</a>
                     <a href="https://eozipsec.github.io/" target="_blank" class="text-sm font-medium text-eoz-neon hover:brightness-125 transition flex items-center gap-2">
                         <i class="fas fa-user-shield"></i> Seguridad
@@ -131,9 +135,7 @@
 
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <!-- Decoración de fondo -->
         <div class="absolute top-0 right-0 -z-10 w-[500px] h-[500px] bg-eoz-cyan/10 blur-[120px] rounded-full"></div>
-        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="fade-in">
@@ -153,13 +155,10 @@
                     </div>
                 </div>
 
-                <!-- Logo Mejorado / Profesionalizado -->
                 <div class="relative fade-in flex justify-center lg:justify-end">
                     <div class="logo-frame glow-effect group transition-all duration-500">
                         <div class="relative w-72 h-72 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-eoz-dark border border-white/10">
-                            <!-- Forzamos recarga de imagen con ?v=2 -->
                             <img src="logo-eoz.jpg?v=2" alt="Logo Profesional EoZ" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                            <!-- Overlay para dar profundidad -->
                             <div class="absolute inset-0 bg-gradient-to-t from-eoz-dark/60 to-transparent"></div>
                             <div class="absolute bottom-6 left-6">
                                 <span class="text-xs font-bold tracking-widest text-eoz-cyan uppercase">Eoz Digital Studio</span>
@@ -180,7 +179,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Servicio 1: Google -->
                 <article class="bg-eoz-card rounded-2xl p-8 border border-white/5 card-hover transition-all fade-in">
                     <div class="w-14 h-14 bg-eoz-cyan/10 rounded-xl flex items-center justify-center mb-6">
                         <i class="fab fa-google text-2xl text-eoz-cyan"></i>
@@ -189,7 +187,6 @@
                     <p class="text-gray-400 mb-6">Aparece arriba de tu competencia cuando tus vecinos buscan servicios en Madariaga. Maps y SEO Local.</p>
                 </article>
 
-                <!-- Servicio 2: Meta -->
                 <article class="bg-gradient-to-b from-eoz-card to-eoz-dark rounded-2xl p-8 border border-eoz-cyan relative transform md:-translate-y-4 shadow-2xl shadow-eoz-cyan/20 fade-in">
                     <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-eoz-cyan text-slate-900 px-4 py-1 rounded-full text-sm font-bold uppercase">
                         Consultas Directas
@@ -201,7 +198,6 @@
                     <p class="text-gray-300 mb-6 font-medium">Llenamos tu WhatsApp de gente interesada. Hacemos publicidad en Instagram y Facebook que genera conversaciones y ventas reales, no solo likes.</p>
                 </article>
 
-                <!-- Servicio 3: Web Pro -->
                 <article class="bg-eoz-card rounded-2xl p-8 border border-white/5 card-hover transition-all fade-in">
                     <div class="w-14 h-14 bg-eoz-neon/10 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-rocket text-2xl text-eoz-neon"></i>
@@ -213,10 +209,127 @@
         </div>
     </section>
 
-    <!-- SECCIÓN PROFESIONALES (REVISADO: 6 PROFESIONALES) -->
+    <!-- SECCIÓN PLANES DE DISEÑO WEB (NUEVA) -->
+    <section id="planes" class="py-24 bg-[#0c121e]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-eoz-neon font-bold tracking-wide uppercase text-sm mb-2">Planes de Diseño Web</h2>
+                <h3 class="text-4xl lg:text-5xl font-extrabold mb-4">Diseño Web profesional a medida</h3>
+                <p class="text-eoz-text text-lg">Creamos sitios únicos desde cero para potenciar tu negocio.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Plan Económico -->
+                <div class="bg-eoz-card/40 border border-white/5 p-6 rounded-3xl hover:bg-eoz-card/60 transition-all fade-in">
+                    <h4 class="text-xl font-bold text-eoz-cyan mb-4">Económico</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-neon text-[10px]"></i> Landing Pages</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-neon text-[10px]"></i> Diseño One-Page</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-neon text-[10px]"></i> Botón WhatsApp</li>
+                    </ul>
+                </div>
+
+                <!-- Plan Profesional -->
+                <div class="bg-eoz-card/40 border border-eoz-cyan/30 p-6 rounded-3xl hover:bg-eoz-card/60 transition-all fade-in">
+                    <h4 class="text-xl font-bold text-white mb-4">Profesional</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-cyan text-[10px]"></i> Para Empresas</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-cyan text-[10px]"></i> Multi-sección</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-cyan text-[10px]"></i> SEO Estructurado</li>
+                    </ul>
+                </div>
+
+                <!-- Plan Ecommerce -->
+                <div class="bg-eoz-card/40 border border-white/5 p-6 rounded-3xl hover:bg-eoz-card/60 transition-all fade-in">
+                    <h4 class="text-xl font-bold text-eoz-neon mb-4">E-commerce</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-neon text-[10px]"></i> Tiendanube / Propia</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-neon text-[10px]"></i> Carrito de Compras</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-eoz-neon text-[10px]"></i> Pagos Online</li>
+                    </ul>
+                </div>
+
+                <!-- Plan Especializado -->
+                <div class="bg-eoz-card/40 border border-white/5 p-6 rounded-3xl hover:bg-eoz-card/60 transition-all fade-in">
+                    <h4 class="text-xl font-bold text-gray-300 mb-4">Sistemas</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-white text-[10px]"></i> Inmobiliarias</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-white text-[10px]"></i> Hoteles / Reservas</li>
+                        <li class="flex items-center gap-2 text-sm text-gray-400 py-1"><i class="fas fa-check text-white text-[10px]"></i> Diarios Online</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Servicios Específicos Adicionales (Tags) -->
+            <div class="mt-12 flex flex-wrap justify-center gap-3 fade-in">
+                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs text-gray-400">Autoadministrable</span>
+                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs text-gray-400">Cursos a Distancia</span>
+                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs text-gray-400">Agencias de Viajes</span>
+                <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs text-gray-400">Restaurantes</span>
+                <span class="px-4 py-2 bg-eoz-cyan/10 border border-eoz-cyan/20 rounded-full text-xs text-eoz-cyan font-bold uppercase tracking-wider">A Medida</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PARA TENER EN CUENTA (NUEVA) -->
+    <section class="py-24 bg-eoz-dark border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-eoz-cyan font-bold tracking-wide uppercase text-sm mb-2">Transparencia Total</h2>
+                <h3 class="text-3xl lg:text-4xl font-extrabold mb-4">Para tener en cuenta antes de contratar tu Diseño Web</h3>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <!-- Beneficio 1 -->
+                <div class="text-center fade-in">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-eoz-cyan">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h5 class="text-xs font-bold uppercase tracking-tighter leading-tight">No utilizamos Plantillas <span class="block text-eoz-text font-normal normal-case mt-1">Pre diseñadas</span></h5>
+                </div>
+                <!-- Beneficio 2 -->
+                <div class="text-center fade-in">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-eoz-neon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h5 class="text-xs font-bold uppercase tracking-tighter leading-tight">Diseños Web <span class="block text-eoz-text font-normal normal-case mt-1">A Medida</span></h5>
+                </div>
+                <!-- Beneficio 3 -->
+                <div class="text-center fade-in">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-eoz-cyan">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h5 class="text-xs font-bold uppercase tracking-tighter leading-tight">Hosting Bonificado <span class="block text-eoz-text font-normal normal-case mt-1">Por un año</span></h5>
+                </div>
+                <!-- Beneficio 4 -->
+                <div class="text-center fade-in">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-eoz-neon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h5 class="text-xs font-bold uppercase tracking-tighter leading-tight">Sin costos <span class="block text-eoz-text font-normal normal-case mt-1">Mensuales</span></h5>
+                </div>
+                <!-- Beneficio 5 -->
+                <div class="text-center fade-in">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-eoz-cyan">
+                        <i class="fas fa-handshake-slash"></i>
+                    </div>
+                    <h5 class="text-xs font-bold uppercase tracking-tighter leading-tight">No cobramos <span class="block text-eoz-text font-normal normal-case mt-1">Mantenimiento</span></h5>
+                </div>
+                <!-- Beneficio 6 -->
+                <div class="text-center fade-in">
+                    <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-eoz-neon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h5 class="text-xs font-bold uppercase tracking-tighter leading-tight">Certificado SSL <span class="block text-eoz-text font-normal normal-case mt-1">Incluido Gratis</span></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PROFESIONALES -->
     <section id="profesionales" class="py-24 bg-gradient-to-b from-transparent to-eoz-card/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-eoz-card/50 border border-white/10 rounded-3xl p-8 lg:p-16 overflow-hidden relative">
+            <div class="bg-eoz-card/50 border border-white/10 rounded-3xl p-8 lg:p-16 overflow-hidden relative shadow-2xl">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-eoz-cyan/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -233,8 +346,8 @@
                                     <i class="fas fa-calendar-check text-xl"></i>
                                 </div>
                                 <div>
-                                    <h5 class="text-lg font-semibold">Reserva de Turnos Online</h5>
-                                    <p class="text-sm text-gray-500">Automatizamos tu agenda. Que tus pacientes o clientes reserven sin esperas, directamente desde su celular.</p>
+                                    <h5 class="text-lg font-semibold text-gray-100">Reserva de Turnos Online</h5>
+                                    <p class="text-sm text-gray-500 leading-relaxed">Automatizamos tu agenda. Que tus pacientes o clientes reserven sin esperas, directamente desde su celular.</p>
                                 </div>
                             </div>
                             <div class="flex gap-4">
@@ -242,14 +355,13 @@
                                     <i class="fas fa-id-card text-xl"></i>
                                 </div>
                                 <div>
-                                    <h5 class="text-lg font-semibold">Perfil de Autoridad</h5>
-                                    <p class="text-sm text-gray-500">Optimizamos tu marca personal para que tu trayectoria profesional destaque y atraiga mejores oportunidades.</p>
+                                    <h5 class="text-lg font-semibold text-gray-100">Perfil de Autoridad</h5>
+                                    <p class="text-sm text-gray-500 leading-relaxed">Optimizamos tu marca personal para que tu trayectoria profesional destaque y atraiga mejores oportunidades.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Cuadrícula de Profesionales (Garantizada con 6 perfiles) -->
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 fade-in">
                         <div class="bg-eoz-dark/80 p-6 rounded-2xl border border-white/5 flex flex-col items-center text-center shadow-xl group hover:border-eoz-cyan/40 transition-all">
                             <i class="fas fa-hard-hat text-3xl text-eoz-cyan mb-3 transition-transform group-hover:scale-110"></i>
@@ -281,19 +393,19 @@
         </div>
     </section>
 
-    <!-- Beneficios Directos -->
-    <section id="metodo" class="py-20">
+    <!-- Beneficios Directos (Fila Final antes de Footer) -->
+    <section class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                 <div class="fade-in">
                     <h2 class="text-3xl font-bold mb-6">Tu socio tecnológico local</h2>
-                    <p class="text-gray-400 mb-6">
+                    <p class="text-gray-400 mb-6 leading-relaxed">
                         No somos una agencia genérica. Estamos en **General Madariaga**, conocemos tus calles y a tus clientes. Aplicamos tecnología de punta para que tu negocio crezca de forma real y medible.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-full bg-eoz-cyan/20 flex items-center justify-center text-eoz-cyan"><i class="fas fa-chart-line"></i></div>
-                            <span class="font-semibold text-lg text-gray-200">Retorno de Inversión (ROI) Garantizado</span>
+                            <span class="font-semibold text-lg text-gray-200">Retorno de Inversión (ROI) Real</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-full bg-eoz-neon/20 flex items-center justify-center text-eoz-neon"><i class="fas fa-rocket"></i></div>
@@ -301,7 +413,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative bg-eoz-card border border-white/10 rounded-3xl p-12 text-center fade-in glow-effect">
+                <div class="relative bg-eoz-card border border-white/10 rounded-3xl p-12 text-center fade-in glow-effect overflow-hidden">
+                   <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-eoz-cyan to-eoz-neon"></div>
                    <div class="inline-block p-4 rounded-full bg-eoz-cyan/10 mb-6">
                         <i class="fas fa-users-viewfinder text-5xl text-eoz-cyan"></i>
                    </div>
@@ -324,7 +437,7 @@
                     <i class="fab fa-whatsapp"></i> Contacto Directo
                 </a>
             </div>
-            <p class="font-bold text-gray-400 text-xs tracking-widest">&copy; <span id="year"></span> EOZ DIGITAL STUDIO. TODOS LOS DERECHOS RESERVADOS.</p>
+            <p class="font-bold text-gray-400 text-xs tracking-widest uppercase">&copy; <span id="year"></span> EOZ DIGITAL STUDIO. TODOS LOS DERECHOS RESERVADOS.</p>
         </div>
     </footer>
 
